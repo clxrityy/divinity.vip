@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
+
+#neons {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#neons h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Codystar";
+    font-weight: bold;
+    animation: glow 2s ease-in-out infinite alternate;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        color: #fff;
+        text-shadow: 0 0 10px #ffe002, 0 0 20px #ffe002, 0 0 30px #ffe002, 0 0 40px #ffe002, 0 0 50px #ffe002, 0 0 60px #ffe002, 0 0 70px #ffe002, 0 0 90px #ffe002;
+    }
+
+    to {
+        color: gray;
+        text-shadow: 0 0 20px #ffe002, 0 0 30px #ffe002, 0 0 40px #ffe002, 0 0 50px #ffe002, 0 0 60px #ffe002, 0 0 70px #ffe002, 0 0 80px #ffe002, 0 1 90px #ffe002;
+    }
+}
