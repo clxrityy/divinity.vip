@@ -4,7 +4,9 @@ import './css/Title.css';
 const Title = () => {
     return (
         <div>
-            <div id="neons">
+            <div
+    
+                id="title">
                 <h1>divinity</h1>
             </div>
         </div>

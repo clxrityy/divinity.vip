@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Footer from './layout/Footer';
 // import { useStateContext } from './contexts';
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
