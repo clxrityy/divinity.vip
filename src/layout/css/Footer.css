@@ -1,5 +1,25 @@
 #Footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
 }
+
+#clxrity {
+    padding-right: 25px;
+}
+
+#earth-icon {
+    animation: rotation 2s infinite linear;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+

@@ -5,7 +5,7 @@ const Title = () => {
     return (
         <div>
             <div
-    
+                className=''
                 id="title">
                 <h1>divinity</h1>
             </div>
