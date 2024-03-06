@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: screen;
+  width: screen;
+  background-color: #c0c0c068;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+main {
+  @apply h-screen w-screen flex items-center justify-center flex-col px-12 mx-auto py-8
+}
+
+.title-link {
+
+  @apply absolute top-0 left-0 flex flex-row items-center text-center px-5 py-3 hover:scale-95 transition-all gap-1 text-sky-800/80
+}
+
+.title-link h1 {
+  text-shadow: 1px 2px 5px #e3edff;
+  @apply  font-bold text-2xl md:text-3xl lg:text-4xl
+}
+
+.hero-text {
+  text-shadow: 0px 1px 2.5px rgb(7 89 133 / 0.3);
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+.animate-spin-slower {
+  animation: spin 5s linear infinite;
+}
