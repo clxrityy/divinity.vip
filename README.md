@@ -1,4 +1,4 @@
-# divinity.vip <img src="/public/apple-touch-icon.png" style="width:30px" />
+# [divinity.vip](https://www.divinity.vip) <img src="/public/apple-touch-icon.png" style="width:30px" />
 
 share anonymous confessions, advice, and stories. no authentication required
 
