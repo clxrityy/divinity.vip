@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: screen;
-  width: screen;
-  background-color: #c0c0c068;
+html, body {
   color: rgba(0, 0, 0, 0.79);
 }
 
+
 main {
-  @apply h-screen w-screen flex items-center justify-center flex-col px-12 mx-auto py-8
+  @apply w-screen flex items-center flex-col xl:flex-row px-12 mx-auto py-12
+}
+
+textarea {
+
+  @apply rounded-md bg-sky-50/25 border border-sky-800 w-full h-full focus:outline-none focus:ring-sky-800 focus:ring ring-offset-1 px-3 py-2
 }
 
 .title-link {
@@ -20,7 +22,6 @@ main {
 }
 
 .title-link h1 {
-  text-shadow: 1px 2px 5px #e3edff;
   @apply  font-bold text-2xl md:text-3xl lg:text-4xl
 }
 
