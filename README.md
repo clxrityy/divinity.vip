@@ -2,7 +2,7 @@
 
 share anonymous confessions, advice, and stories. no authentication required
 
-built with **[Nextjs](https://nextjs.org/)** & **[firebase](https://firebase.google.com/)**
+built with **[Nextjs](https://nextjs.org/)** & **[firebase](https://firebase.google.com/)**, deployed with **[vercel](https://vercel.com)**
 
 ---
 

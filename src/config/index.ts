@@ -2,6 +2,7 @@ import { MdDiamond } from "react-icons/md";
 import { HiMiniGlobeAlt } from "react-icons/hi2";
 import { HiPencilAlt } from "react-icons/hi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 
 
 
@@ -10,7 +11,8 @@ const config = {
         logo: MdDiamond,
         globe: HiMiniGlobeAlt,
         post: HiPencilAlt,
-        loading: AiOutlineLoading3Quarters
+        loading: AiOutlineLoading3Quarters,
+        github: FaGithub
     }
 }
 

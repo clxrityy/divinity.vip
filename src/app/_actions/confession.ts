@@ -2,10 +2,10 @@
 import { db } from "@/lib/firebase";
 import { IPost } from "@/util/types";
 import uuid from "@/util/uuid";
-import {  collection, doc, getDoc, getDocs, query, setDoc } from "firebase/firestore";
+import {  collection, doc, getDoc, getDocs, orderBy, query, setDoc } from "firebase/firestore";
 
 export async function getConfessions () {
-    const confessions = await getDocs(query(collection(db, "confessions")));
+    const confessions = await getDocs(query(collection(db, "confessions"), orderBy("date", "desc")));
 
     return confessions.docs;
 };
