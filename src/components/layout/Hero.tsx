@@ -19,7 +19,7 @@ const Hero = () => {
                         </Button>
                     </Link>
                     <Link href="/advice" className="w-full">
-                        <Button solid disabled>
+                        <Button solid>
                             advice
                         </Button>
                     </Link>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Toaster } from "react-hot-toast"
 
 export const metadata: Metadata = {
-    title: "divinity | confessions",
+    title: "divinity | posts",
     description: "anonymous confessions"
 }
 

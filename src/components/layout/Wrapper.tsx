@@ -1,12 +1,16 @@
 "use client";
 
-import { postConfession } from "@/app/_actions/confession";
-import { FormEvent } from "react";
+import { ComponentProps, FormEvent } from "react";
 import PostForm from "../PostForm";
 import toast from "react-hot-toast";
+import { createPost } from "@/app/_actions/post";
 
-const Wrapper = () => {
-    
+type Props = {
+    postType: "confession" | "advice" | "story";
+} & ComponentProps<"div">;
+
+const Wrapper = ({ postType, ...props }: Props) => {
+
 
     async function onSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -14,19 +18,26 @@ const Wrapper = () => {
         const formData = new FormData(e.currentTarget);
 
         try {
-            await postConfession(formData).then(() => {
-                toast.success("Confessed!")
+            await createPost(formData, postType).then(() => {
+                toast.success("Posted!")
             });
         } catch (err) {
-            toast.error(`Error confessing!`);
+            toast.error(`Error posting!`);
             console.log(err);
         }
-        
+
+    }
+
+    const maxCharacters = () => {
+        if (postType === "story") {
+            return 2000;
+        }
+        return 100; 
     }
 
     return (
-        <div className="flex w-1/2 lg:w-2/3 2xl:w-1/2 items-center gap-5">
-            <PostForm onSubmit={onSubmit} />
+        <div {...props} className="flex w-1/2 lg:w-2/3 2xl:w-1/2 items-center gap-5">
+            <PostForm maxCharacters={maxCharacters()} postType={postType} onSubmit={onSubmit} />
         </div>
     );
 }
