@@ -38,6 +38,11 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:description" content="a divine place to be anonymous" />
         <meta name="theme-color" content="#52789a" />
+        <meta property="og:image" content="/android-chrome-512x512.png" />
+        <meta property="og:image:alt" content="diamond logo icon" />
+        <meta property="og:image:width" content="128" />
+        <meta property="og:image:height" content="128" />
+        <meta property="og:image:type" content="image/png" />
       </head>
       <body className={inter.className}>
         <Navbar />
