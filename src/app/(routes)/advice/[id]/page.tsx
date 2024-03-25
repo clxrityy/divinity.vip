@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
         title: "advice",
         openGraph: {
             description: advice?.content,
+            authors: "anonymous"
         }
     }
 }
