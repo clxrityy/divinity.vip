@@ -26,7 +26,7 @@ export default async function AdvicePage() {
             </div>
         </div>
 
-        <div className="w-full xl:w-4/5 2xl:w-3/4 flex items-center justify-center h-full bg-gradient-to-l from-slate-400/10 to-sky-300/10 py-10 mx-auto rounded-md shadow-lg">
+        <div className="w-full xl:w-4/5 2xl:w-3/4 flex items-center justify-center h-full bg-gradient-to-l from-red-200/10 to-red-200/10 py-10 mx-auto rounded-md shadow-lg">
             <div className="grid grid-flow-row grid-cols-1 xl:grid-cols-2 w-2/3 2xl:w-3/4 items-center gap-5">
                 {advices.map((advice, idx) => (
                     <Item postType="advice" key={idx} data={advice} />

@@ -7,3 +7,6 @@ export interface IPost extends DocumentData {
     date: Date | number;
 }
 
+export interface IStory extends IPost {
+    title: string;
+}

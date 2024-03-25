@@ -4,12 +4,19 @@ import { ComponentProps, FormEvent } from "react";
 import PostForm from "../PostForm";
 import toast from "react-hot-toast";
 import { createPost } from "@/app/_actions/post";
+import { revalidatePath } from "next/cache";
 
 type Props = {
     postType: "confession" | "advice" | "story";
 } & ComponentProps<"div">;
 
 const Wrapper = ({ postType, ...props }: Props) => {
+
+    const path = () => {
+        if (postType === "confession") return "/confessions";
+        if (postType === "advice") return "/advice";
+        if (postType === "story") return "/stories";
+    }
 
 
     async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -24,6 +31,10 @@ const Wrapper = ({ postType, ...props }: Props) => {
         } catch (err) {
             toast.error(`Error posting!`);
             console.log(err);
+        } finally {
+            e.currentTarget!.innerText = "";
+
+            revalidatePath(path()!);
         }
 
     }
@@ -42,4 +53,4 @@ const Wrapper = ({ postType, ...props }: Props) => {
     );
 }
 
-export default Wrapper
+export default Wrapper;

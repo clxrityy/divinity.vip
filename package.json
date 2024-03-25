@@ -2,6 +2,12 @@
   "name": "divinity.vip",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "MJ Anglin",
+    "url": "https://www.mjanglin.com",
+    "email": "contact@mjanglin.com"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
