@@ -32,6 +32,9 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta property="og:title" content="divinity" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="a divine place to be anonymous" />
       </head>
       <body className={inter.className}>
         <Navbar />
