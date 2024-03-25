@@ -9,11 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "divinity",
-  description: "A divine place to be anonymous",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>
+          divinity
+        </title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -35,6 +37,7 @@ export default function RootLayout({
         <meta property="og:title" content="divinity" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="a divine place to be anonymous" />
+        <meta name="theme-color" content="#52789a" />
       </head>
       <body className={inter.className}>
         <Navbar />
