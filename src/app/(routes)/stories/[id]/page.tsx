@@ -13,8 +13,10 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     const story = await getStoryByUuid(id);
 
     return {
-        title: `story | ${story?.title}`,
-        description: story?.content || "",
+        title: `${story?.title}`,
+        openGraph: {
+            description: `${story?.content}`
+        }
     }
 }
 

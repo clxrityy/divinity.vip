@@ -14,7 +14,9 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 
     return {
         title: "confession",
-        description: confession?.content || "",
+        openGraph: {
+            description: confession?.content 
+        }
     }
 }
 
