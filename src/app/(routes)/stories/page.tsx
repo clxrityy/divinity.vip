@@ -13,7 +13,7 @@ export default async function StoriesPage() {
 
     stories ? stories.forEach((story) => storiesArray.push(story)) : storiesArray = [];
 
-    return <main className="w-full h-full flex items-center justify-center flex-col">
+    return <main className="w-full h-full flex items-center justify-between flex-col gap-12">
         <h1 className="sr-only">
             stories
         </h1>
@@ -25,8 +25,8 @@ export default async function StoriesPage() {
             </div>
         </div>
 
-        <div className="w-full xl:w-4/5 2xl:w-3/4 flex items-center justify-center h-full bg-gradient-to-r from-green-200/5 to-green-100/25 py-10 mx-auto rounded-md shadow-md">
-            <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-1/2 xl:w-2/3 items-center gap-5">
+        <div className="bg-gradient-to-r from-green-200/5 to-green-100/25 post-container-box">
+            <div className="post-container">
                 {storiesArray.map((story, idx) => (
                     <Item key={idx} postType="story" data={story} />
                 ))}

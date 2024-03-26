@@ -40,7 +40,7 @@ export default async function StoryPost({ params }: Props) {
 
 
     return (
-        <main className="flex items-center justify-center w-full h-full relative">
+        <main className="flex items-center justify-center w-full h-full">
             <div className="h-[60vh] w-full flex items-center justify-center flex-col gap-16">
                 <h1 className="text-center text-4xl tracking-wider font-bold text-emerald-700/45">
                     story
@@ -53,7 +53,7 @@ export default async function StoryPost({ params }: Props) {
                         {`${hour}:00`}
                     </span>
                 </h1>
-                <div className="border mx-auto px-16 py-16 rounded-md border-emerald-600/75 border-separate shadow-inner bg-emerald-300/25 flex flex-col items-start gap-3">
+                <div className="border mx-auto px-16 py-16 rounded-md border-emerald-600/75 border-separate shadow-inner bg-emerald-300/25 flex flex-col items-start gap-3 h-auto">
                     <p className="w-full text-end mb-5 font-bold -mt-3">
                         {story.title}
                     </p>

@@ -3,9 +3,9 @@ import Hero from "@/components/layout/Hero";
 
 export default function Home() {
   return (
-    <main className="justify-center items-center h-[100vh]">
+    <main className="justify-between items-center h-[100vh] gap-10 flex">
       <Hero />
-      <div className="h-full flex w-full mx-auto justify-center items-center flex-col gap-2">
+      <div className="h-1/2 flex w-full mx-auto justify-center items-center flex-col gap-2">
         <h1 className="text-2xl font-bold tracking-wide">
           RULES
         </h1>

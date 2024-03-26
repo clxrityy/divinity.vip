@@ -1,10 +1,10 @@
 "use client";
 
-import { ComponentProps, FormEvent } from "react";
+import { ComponentProps, FormEvent, useRef } from "react";
 import PostForm from "../PostForm";
 import toast from "react-hot-toast";
 import { createPost } from "@/app/_actions/post";
-import { revalidatePath } from "next/cache";
+
 import checkForSpam from "@/util/checkForSpam";
 
 type Props = {
@@ -12,6 +12,8 @@ type Props = {
 } & ComponentProps<"div">;
 
 const Wrapper = ({ postType, ...props }: Props) => {
+
+    const ref = useRef<HTMLFormElement>(null);
 
     const path = () => {
         if (postType === "confession") return "/confessions";
@@ -47,9 +49,7 @@ const Wrapper = ({ postType, ...props }: Props) => {
                 toast.error(`Error posting!`);
                 console.log(err);
             } finally {
-                e.currentTarget!.innerText = "";
-    
-                revalidatePath(path()!);
+                ref.current?.reset();
             }
         } else {
             toast.error(isSpam.message);
@@ -65,8 +65,8 @@ const Wrapper = ({ postType, ...props }: Props) => {
     }
 
     return (
-        <div {...props} className="flex w-1/2 lg:w-2/3 2xl:w-1/2 items-center gap-5">
-            <PostForm maxCharacters={maxCharacters()} postType={postType} onSubmit={onSubmit} />
+        <div {...props} className="flex w-1/2 lg:w-2/3 2xl:w-1/2 items-center gap-5 h-full">
+            <PostForm maxCharacters={maxCharacters()} postType={postType} onSubmit={onSubmit} ref={ref} />
         </div>
     );
 }

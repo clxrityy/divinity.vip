@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -61,8 +62,13 @@ export default function RootLayout({
         <meta name="news_keywords" content="anonymous, divine, universe" />
       </head>
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <div className="max-h-screen h-screen relative">
+          <Navbar />
+          {children}
+          <div className="fixed w-full">
+          <Footer />
+          </div>
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

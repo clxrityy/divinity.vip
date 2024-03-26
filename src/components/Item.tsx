@@ -31,11 +31,11 @@ export default function Item({ postType, data, ...props }: Props) {
                         {data.get("content")}
                     </p>
                 </div>
-                <div className="flex flex-col items-end w-full text-sm text-gray-700">
+                <div className="flex flex-col items-end w-full text-sm text-gray-700 font-mono mt-2">
                     <span className="text-xs">
                         {`${hour}:00`}
                     </span>
-                    <span>
+                    <span className="text-sm">
                         {`${month}/${day}`}
                     </span>
                 </div>
@@ -53,11 +53,11 @@ export default function Item({ postType, data, ...props }: Props) {
                         {data.get("content")}
                     </p>
                 </div>
-                <div className="flex flex-col items-end w-full text-sm text-gray-700">
+                <div className="flex flex-col items-end w-full text-sm text-gray-700 font-mono mt-2">
                     <span className="text-xs">
                         {`${hour}:00`}
                     </span>
-                    <span>
+                    <span className="text-sm">
                         {`${month}/${day}`}
                     </span>
                 </div>
@@ -73,11 +73,11 @@ export default function Item({ postType, data, ...props }: Props) {
                         {data.get("title")}
                     </p>
                 </div>
-                <div className="flex flex-col items-end w-full text-sm text-gray-700">
+                <div className="flex flex-col items-end w-full text-sm text-gray-700 font-mono mt-2">
                     <span className="text-xs">
                         {`${hour}:00`}
                     </span>
-                    <span>
+                    <span className="text-sm">
                         {`${month}/${day}`}
                     </span>
                 </div>

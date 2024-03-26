@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="h-[65vh] font-semibold w-full">
+        <div className="h-full font-semibold w-full">
             <div className="flex flex-col items-center justify-between gap-16 w-full">
                 <motion.div
                     initial="hidden"

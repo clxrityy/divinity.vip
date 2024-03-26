@@ -5,6 +5,14 @@
 html, body {
   color: rgba(0, 0, 0, 0.79);
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+* {
+  @apply text-base lg:text-lg
 }
 
 ::-webkit-scrollbar {
@@ -12,12 +20,14 @@ html, body {
 }
 
 main {
+  overflow-y: scroll;
+
   @apply w-screen flex items-center flex-col xl:flex-row px-12 mx-auto py-12
 }
 
 textarea {
 
-  @apply rounded-md bg-sky-50/25 border border-sky-800 w-full h-full focus:outline-none focus:ring-sky-800 focus:ring ring-offset-1 px-3 py-2
+  @apply rounded-md bg-sky-50/25 border border-sky-800 w-full h-full focus:outline-none focus:ring-sky-800 focus:ring ring-offset-1 px-3 py-2 mx-auto
 }
 
 .title-link {
@@ -40,4 +50,13 @@ textarea {
 }
 .animate-spin-slower {
   animation: spin 5s linear infinite;
+}
+
+.post-container-box {
+
+  @apply py-10 mx-auto rounded-md shadow-md w-full xl:w-4/5 2xl:w-3/4 flex items-start justify-between h-full 
+}
+
+.post-container {
+  @apply grid grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-full xl:w-2/3 items-center gap-5 mx-4 xl:mx-auto
 }

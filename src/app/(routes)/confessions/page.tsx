@@ -18,15 +18,15 @@ export default async function ConfessionsPage() {
         <h1 className="sr-only">
             confessions
         </h1>
-        <div className="h-full w-full flex justify-center mt-10 flex-col">
-            <div className="flex flex-col text-center items-center gap-10 w-full">
+        <div className="h-fit w-full flex justify-center mt-10 flex-col">
+            <div className="flex flex-col text-center items-center gap-10 w-full h-fit">
                 <Suspense fallback={<Loading size={250} />}>
                     <Wrapper postType="confession" />
                 </Suspense>
             </div>
         </div>
-        <div className="w-full xl:w-4/5 2xl:w-3/4 flex items-center justify-center h-full bg-gradient-to-r from-slate-200 to-sky-100 py-10 mx-auto rounded-md shadow-md">
-            <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-1/2 xl:w-2/3 items-center gap-5">
+        <div className="post-container-box bg-gradient-to-r from-slate-200 to-sky-100">
+            <div className="post-container">
                 {confessionArray.map((confession, idx) => (
                     <Item postType="confession" key={idx} data={confession} />
                 ))}

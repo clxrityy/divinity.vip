@@ -22,7 +22,7 @@ const Button = ({ children, solid, btnColor, ...props }: Props) => {
 
 
 
-    return <button {...props} className={`w-full px-6 py-4 ${className} rounded-md hover:scale-95 transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-sky-800/75 ring-offset-2 font-semibold text-center flex items-center justify-center disabled:cursor-not-allowed disabled:hover:scale-100`}>
+    return <button {...props} className={`w-full px-8 py-5 ${className} rounded-md hover:scale-95 transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-sky-800/75 ring-offset-2 font-semibold text-center flex items-center justify-center disabled:cursor-not-allowed disabled:hover:scale-100 text-xs sm:text-sm md:text-base`}>
         {children}
     </button>;
 }
