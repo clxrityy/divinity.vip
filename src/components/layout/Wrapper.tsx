@@ -5,6 +5,7 @@ import PostForm from "../PostForm";
 import toast from "react-hot-toast";
 import { createPost } from "@/app/_actions/post";
 import { revalidatePath } from "next/cache";
+import checkForSpam from "@/util/checkForSpam";
 
 type Props = {
     postType: "confession" | "advice" | "story";
@@ -24,26 +25,43 @@ const Wrapper = ({ postType, ...props }: Props) => {
 
         const formData = new FormData(e.currentTarget);
 
-        try {
-            await createPost(formData, postType).then(() => {
-                toast.success("Posted!")
-            });
-        } catch (err) {
-            toast.error(`Error posting!`);
-            console.log(err);
-        } finally {
-            e.currentTarget!.innerText = "";
+        let content: string = "";
 
-            revalidatePath(path()!);
+        if (postType === "confession") content = formData.get("confession")?.toString() || "";
+        if (postType === "advice") content = formData.get("advice")?.toString() || "";
+        if (postType === "story") content = formData.get("story")?.toString() || "";
+
+        let isSpam: { success: boolean, message: string } = {
+            success: false,
+            message: "loading..."
+        };
+
+        isSpam = checkForSpam(content, postType);
+
+        if (isSpam.success) {
+            try {
+                await createPost(formData, postType).then(() => {
+                    toast.success("Posted!")
+                });
+            } catch (err) {
+                toast.error(`Error posting!`);
+                console.log(err);
+            } finally {
+                e.currentTarget!.innerText = "";
+    
+                revalidatePath(path()!);
+            }
+        } else {
+            toast.error(isSpam.message);
+            console.log(`[SPAM DETECTED]\n${postType} -- ${content}`)
         }
-
     }
 
     const maxCharacters = () => {
         if (postType === "story") {
             return 2000;
         }
-        return 100; 
+        return 100;
     }
 
     return (
