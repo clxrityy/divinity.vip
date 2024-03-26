@@ -47,6 +47,22 @@ const checkForSpam = (input: string, postType: "confession" | "advice" | "story"
         }
     }
 
+    for (let i = 0; i < inputSplit.length; i++) {
+        if (inputSplit[i].includes("http") || inputSplit[i].includes("www")) {
+            checked = {
+                success: false,
+                message: "Don't post links!"
+            }
+        }
+    }
+
+    if (input.includes("discord.gg") || input.includes("discord.com/invite")) { 
+        checked = {
+            success: false,
+            message: "Don't post discord links!"
+        }
+    }
+
     return checked;
 }
 
