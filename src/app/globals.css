@@ -54,7 +54,7 @@ textarea {
 
 .post-container-box {
 
-  @apply py-10 mx-auto rounded-md shadow-md w-full xl:w-4/5 2xl:w-3/4 flex items-start justify-between h-full 
+  @apply py-10 mx-auto rounded-md shadow-md w-full xl:w-4/5 2xl:w-3/4 flex items-start justify-between h-full overflow-auto
 }
 
 .post-container {
