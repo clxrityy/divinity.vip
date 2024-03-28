@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layout/Footer";
 
-const figtree = Figtree({subsets: ["latin"]});
+const figtree = Figtree({subsets: ["latin"], preload: true});
 
 export const metadata: Metadata = {
   title: "divinity",
