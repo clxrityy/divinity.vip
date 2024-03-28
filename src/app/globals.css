@@ -53,10 +53,21 @@ textarea {
 }
 
 .post-container-box {
+  scrollbar-color: #6e7685 #2D3748;
+  scroll-behavior: smooth;
+
 
   @apply py-10 mx-auto rounded-md shadow-md w-full xl:w-4/5 2xl:w-3/4 flex items-start justify-between h-full overflow-auto
 }
 
 .post-container {
   @apply grid grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-full xl:w-2/3 items-center gap-5 mx-4 xl:mx-auto
+}
+
+.page-container {
+  scrollbar-color: #6e7685 #2D3748;
+  scroll-behavior: smooth;
+
+
+  @apply overflow-y-auto flex flex-col items-start gap-3 h-auto border-separate shadow-inner border mx-auto px-16 py-12 rounded-md 
 }

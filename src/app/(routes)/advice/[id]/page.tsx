@@ -53,7 +53,7 @@ export default async function AdvicePost({ params }: Props) {
                         {`${hour}:00`}
                     </span>
                 </h1>
-                <div className="border mx-auto px-16 py-16 rounded-md border-gray-600/75 border-separate shadow-inner bg-gray-300/25 flex flex-col items-start gap-2">
+                <div className="page-container border-gray-600/75 bg-gray-300/25">
                     <h4 className="text-xl xl:text-2xl text-gray-600">
                         {advice.content}
                     </h4>
