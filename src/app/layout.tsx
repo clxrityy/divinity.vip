@@ -40,6 +40,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-touch-fullscreen" content="yes" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="description" content="share divine notes with the world anonymously" />
         <meta name="og:title" content="divinity" />
         <meta name="og:type" content="website" />
         <meta name="og:description" content="a divine place to be anonymous" />
