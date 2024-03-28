@@ -1,8 +1,8 @@
 import config from "@/config";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 
-export async function generateMetadata(parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
 
     return {
         title: "divinity | admin",
