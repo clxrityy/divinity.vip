@@ -27,6 +27,8 @@ export async function postAdvice(formData: FormData) {
     } catch (e) {
         throw e;
     }
+
+    return post;
 }
 
 export async function getAdviceByUuid(id: string) {

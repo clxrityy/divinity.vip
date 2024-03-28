@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    description: "a divine place to be anonymous",
+  }
 };
 
 export default function RootLayout({

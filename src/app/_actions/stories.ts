@@ -30,6 +30,8 @@ export async function postStory(formData: FormData) {
     } catch (e) {
         throw e;
     }
+
+    return post;
 }
 
 export async function getStoryByUuid(id: string) {

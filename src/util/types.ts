@@ -10,3 +10,8 @@ export interface IPost extends DocumentData {
 export interface IStory extends IPost {
     title: string;
 }
+
+export interface AnyPost {
+    postType: "confession" | "advice" | "story";
+    post: IPost | IStory;
+}

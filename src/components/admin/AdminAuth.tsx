@@ -23,7 +23,7 @@ const AdminAuth = ({ ...props }: Props) => {
         console.log(response)
 
         if (response.success) {
-            toast.success(response.message)
+            toast.success(response.message);
             router.push(`/admin/${adminPath(credentials)}`);
         } else {
             toast.error(response.message);

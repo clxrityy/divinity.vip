@@ -27,6 +27,8 @@ export async function postConfession(formData: FormData) {
     } catch (e) {
         throw e;
     }
+
+    return post;
     
 }
 
