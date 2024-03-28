@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link rel="canonical" href="https://www.divinity.vip" />
         <title>
           divinity
         </title>
