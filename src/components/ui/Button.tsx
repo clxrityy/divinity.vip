@@ -13,7 +13,7 @@ const Button = ({ children, solid, btnColor, ...props }: Props) => {
     if (btnColor === "blue") {
         className = className;
     } else if (btnColor === "grey") {
-        className = solid ? "bg-gray-800/75 text-gray-200 focus:ring-gray-900" : "border border-gray-900/75 text-gray-900 focus:ring-gray-700";
+        className = solid ? "bg-gray-900/75 text-gray-200 focus:ring-gray-900" : "border border-gray-900/75 text-gray-900 focus:ring-gray-800";
     } else if (btnColor === "red") {
         className = solid ? "bg-red-500/40 text-white/75 focus:ring-red-600" : "border border-red-500/75 text-red-500/80 focus:ring-red-600";
     } else if (btnColor === "green") {

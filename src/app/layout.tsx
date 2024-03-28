@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "divinity",
@@ -66,7 +66,7 @@ export default function RootLayout({
         <meta name="og:email" content="contact@mjanglin.com" />
         <meta name="news_keywords" content="anonymous, divine, universe" />
       </head>
-      <body className={inter.className}>
+      <body className={figtree.className}>
         <div className="max-h-screen h-screen relative">
           <Navbar />
           {children}
